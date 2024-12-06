@@ -1,0 +1,5 @@
+This bug occurs when using Expo's `Image` component with a URI that is not properly formatted.  The error is not always caught immediately, sometimes leading to unexpected behavior where the image doesn't load or the app crashes after some time.  The error messages may be unclear, making it difficult to track down the source of the problem. For instance, using a URI with extra spaces or characters can cause this issue.  Another cause could be incorrect file extensions or a URI pointing to a non-existent resource.  This often manifests as a blank space where the image should appear or a generic error message in the console that is difficult to directly link to the image source URI. 
+
+```javascript
+<Image source={{ uri: 'http://example.com/image.jpg ' }} style={{ width: 200, height: 200 }}/>
+```
